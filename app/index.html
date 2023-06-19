@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>Test Project Aleksey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+    <header id="header" class="header">
+  <div class="menu">
+    <div class="burger-menu" id="burgerMenu">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <ul class="menu-list">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Games</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+  <a href="#"><img src="./img/svg/logo.svg" alt="Logo"></a>
+  <a href="#"><img src="./img/svg/avatar.svg" alt="Avatar"></a>
+</header>
+
+    <main id="main" class="main">
+      <div id="successfullyTextShow" class="successfully-text success-text">
+  <h4>Your subscription to Bite Games premium
+    <span>has been successfully processed</span> </h4>
+</div>
+
+<div class="slider">
+  <div class="slide"><img src="./img/slide1.jpg" alt="slide1"></div>
+  <div class="slide"><img src="./img/slide2.jpeg" alt="slide2"></div>
+  <div class="slide"><img src="./img/slide3.jpeg" alt="slide3"></div>
+  <div class="arrow arrow-prev">
+    <svg width="22" height="42" viewBox="0 0 22 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M12.2259 2.77227C14.1732 0.330811 17.8717 0.294358 19.8667 2.69697C21.3641 4.50035 21.3833 7.10913 19.9126 8.93436L14.9962 15.0359C12.0452 18.6983 12.0452 23.9221 14.9962 27.5844L19.9126 33.686C21.3833 35.5112 21.3641 38.12 19.8667 39.9234C17.8717 42.326 14.1732 42.2895 12.2259 39.8481L2.41381 27.5455C-0.495594 23.8977 -0.4956 18.7226 2.4138 15.0748L12.2259 2.77227Z"
+        fill="white" fill-opacity="0.9"/>
+    </svg>
+  </div>
+  <div class="arrow arrow-next">
+    <svg width="22" height="41" viewBox="0 0 22 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M9.21474 39.0954C7.26751 41.5369 3.56895 41.5733 1.57397 39.1707C0.0765613 37.3673 0.0573556 34.7586 1.52806 32.9333L6.44444 26.8318C9.39543 23.1694 9.39543 17.9456 6.44444 14.2833L1.52805 8.18171C0.057354 6.35648 0.076561 3.7477 1.57397 1.94432C3.56895 -0.458286 7.26751 -0.421835 9.21475 2.01963L19.0269 14.3222C21.9363 17.97 21.9363 23.145 19.0269 26.7929L9.21474 39.0954Z"
+        fill="white" fill-opacity="0.9"/>
+    </svg>
+
+  </div>
+  <div class="dots"></div>
+</div>
+
+<button class="subscribe-home" onclick="subscribe()">SUBSCRIBE</button>
+
+<div class="line-gr"></div>
+
+      <div class="title-game">
+  <h2>New Games</h2>
+  <p class="number">6</p>
+</div>
+
+<ul class="image-list">
+  <li><a href="#"><img src="./img/sm-game1.png" alt="Image 1"></a></li>
+  <li><a href="#"><img src="./img/sm-game2.png" alt="Image 2"></a></li>
+  <li><a href="#"><img src="./img/sm-game3.png" alt="Image 3"></a></li>
+  <li><a href="#"><img src="./img/sm-game4.png" alt="Image 4"></a></li>
+  <li><a href="#"><img src="./img/sm-game5.png" alt="Image 5"></a></li>
+  <li><a href="#"><img src="./img/sm-game6.png" alt="Image 6"></a></li>
+</ul>
+
+<div class="more-games">
+  <h4>More Games</h4>
+  <div class="cross">
+    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7.94928 15.0944H7.0507C6.28644 15.0944 5.66113 14.4529 5.66113 13.669V1.54943C5.66113 0.765458 6.28644 0.124023 7.0507 0.124023H7.94928C8.71354 0.124023 9.33885 0.765458 9.33885 1.54943V13.669C9.33885 14.4529 8.71354 15.0944 7.94928 15.0944Z" fill="white"/>
+      <path d="M0.203613 7.91745V6.99569C0.203613 6.21172 0.828918 5.57028 1.59318 5.57028H13.408C14.1722 5.57028 14.7975 6.21172 14.7975 6.99569V7.91745C14.7975 8.70143 14.1722 9.34286 13.408 9.34286H1.59318C0.828918 9.34286 0.203613 8.70143 0.203613 7.91745Z" fill="white"/>
+    </svg>
+  </div>
+</div>
+
+      <div class="title-game title-game-sec">
+  <h2>Popular Games</h2>
+  <p class="number">5</p>
+</div>
+
+<ul class="image-list-second">
+  <li><a href="#"><img src="./img/big-game1.png" alt="Image 1"></a></li>
+  <li><a href="#"><img src="./img/big-game2.png" alt="Image 2"></a></li>
+  <li><a href="#"><img src="./img/big-game3.png" alt="Image 3"></a></li>
+  <li><a href="#"><img src="./img/big-game4.png" alt="Image 4"></a></li>
+  <li><a href="#"><img src="./img/big-game5.png" alt="Image 5"></a></li>
+</ul>
+
+    </main>
+    <div id="content" class="subscribe-case">
+  <div class="subscribe-header">
+    <button id="englishBtn" onclick="changeLanguage('en')">EN</button>
+    <button id="arabicBtn" onclick="changeLanguage('arb')" style="display: none;">ARB</button>
+
+    <img src="./img/svg/jazz.svg" alt="jazz">
+  </div>
+  <div id="text-container">
+    <h1 id="heading"></h1>
+    <h2 id="heading1" class="heading1"></h2>
+    <img src="./img/svg/arrow.svg" alt="arrow">
+
+    <p class="textWrap" id="paragraph"></p>
+
+    <div id="subscribeForm">
+      <h2 id="subheading"></h2>
+      <form class="subscribe-form">
+        <img src="./img/svg/close.svg" alt="Lock">
+        <input class="input" id="input1" type="text" pattern="[0-9]" maxlength="1" required/>
+        <input id="input2" type="text" pattern="[0-9]" maxlength="1" required/>
+        <input id="input3" type="text" pattern="[0-9]" maxlength="1" required/>
+        <input id="input4" type="text" pattern="[0-9]" maxlength="1" required/>
+      </form>
+      <button id="subscribeBtn" type="submit" disabled>Subscribe</button>
+    </div>
+
+    <div id="phoneNumberForm" class="phone-number-form">
+      <h2 id="subheading1"></h2>
+      <form>
+        <div class="codeCountry">
+          <span>+92</span>
+          <input type="tel" id="maskedInput" placeholder="XXX XXX XXX"/>
+          <div id="done">
+            <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.8333 1.39062L5.12496 10.5132L1.16663 6.36659" stroke="white" stroke-width="2.03571"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </form>
+      <button id="phoneNumberFormBtn" type="submit" disabled></button>
+    </div>
+
+    <p id="paragraph1"></p>
+
+    <div id="mobile">
+      <a href="#" id="paragraph2"></a>
+      <a href="#" id="paragraph3"></a>
+    </div>
+
+    <div class="textDropdown">
+      <div class="btnTDD">
+        <svg id="arrowUp1" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1.5L6 6.5L11 1.5" stroke="#8F8F8F" stroke-width="1.66667"/>
+        </svg>
+        <button id="paragraph4" onclick="toggleText()"></button>
+        <svg id="arrowUp2" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1.5L6 6.5L11 1.5" stroke="#8F8F8F" stroke-width="1.66667"/>
+        </svg>
+      </div>
+      <div id="readMoreText" style="display: none;">
+        <p id="paragraph10"></p>
+        <p id="paragraph11"></p>
+        <p id="paragraph12"></p>
+        <p id="paragraph13"></p>
+        <div class="myAccount">
+          <a href="#" id="paragraph14"></a>
+          <p id="paragraph15"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="subscribe-footer">
+      <div class="info">
+        <a href="#" id="paragraph5"></a>
+        <a href="#" id="paragraph6"></a>
+        <a href="#" id="paragraph7"></a>
+      </div>
+
+      <img src="./img/svg/white-logo.svg" alt="Logo">
+      <p id="paragraph8"></p>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="footer">
+  <div class="button-info">
+    <a href="mailto:yakovlev.aleksey42@gmail.com">Contact us</a>
+    <a href="#">FAQ</a>
+  </div>
+  <a href="#"><img src="./img/svg/white-logo.svg" alt="Logo"></a>
+  <h4>©BITEGAMES 2020 All rights reserved</h4>
+</footer>
+
+  </div>
+<script>
+  const texts = {
+    'en': {
+      'heading': 'For the best content',
+      'heading1': 'Click below',
+      'paragraph': 'Get access to an extensive collection of\n premium games',
+      'subheading': 'Enter PIN',
+      'subheading1': 'Enter your phone number:',
+      'subscribeBtn': 'SUBSCRIBE',
+      'paragraph1': '11.95 PKR/Day',
+      'paragraph2': 'Re-send SMS with PIN code',
+      'paragraph3': 'Change number',
+      'paragraph4': 'Read More',
+      'paragraph5': 'T&C',
+      'paragraph6': 'CONTACT US ',
+      'paragraph7': 'FAQ',
+      'paragraph8': '@2023 All Rights Reserved',
+      'phoneNumberFormBtn': 'GET OTP',
+      'paragraph10': 'The cost will be added to your mobile phone bill.',
+      'paragraph11': 'You will be able to play the games already downloaded even if you unsusbcribe',
+      'paragraph12': 'Enjoy over 150 top premium games: ads free and without in-app purchases!',
+      'paragraph13': 'You can cancel your subscription at anytime from',
+      'paragraph14': 'My account',
+      'paragraph15': 'section',
+    },
+    'arb': {
+      'heading': 'انقر أدناه \nلأفضل محتوى',
+      'heading1': 'انقر أدناه',
+      'paragraph': 'احصل على مجموعة واسعة من الألعاب المتميزة',
+      'subheading': 'أدخل رقم التعريف الشخصي',
+      'subheading1': 'أدخل رقم هاتفك:',
+      'subscribeBtn': 'يشترك',
+      'paragraph1': '11.95 روبية باكستانية / يوم',
+      'paragraph2': 'إعادة إرسال الرسائل القصيرة مع رمز PIN',
+      'paragraph3': 'تغيير رقم',
+      'paragraph4': 'اقرأ أكثر',
+      'paragraph5': 'الشروط والأحكام',
+      'paragraph6': 'اتصل بنا',
+      'paragraph7': 'التعليمات',
+      'paragraph8': '@ 2023 جميع الحقوق محفوظة',
+      'phoneNumberFormBtn': 'احصل على OTP',
+      'paragraph10': 'ستضاف التكلفة إلى فاتورة هاتفك المحمول. ستتمكن',
+      'paragraph11': 'الألعاب التي تم تنزيلها بالفعل حتى إذا ألغيت ',
+      'paragraph12': 'الاشتراك استمتع بأكثر من 150 لعبة متميزة: إعلانات ',
+      'paragraph13': 'مجانية وبدون عمليات شراء داخل التطبيق! يمكنك إلغاء ',
+      'paragraph14': '',
+      'paragraph15': '',
+    }
+  };
+
+  function populateTexts(language) {
+    const selectedTexts = texts[language];
+    if (!selectedTexts) return; // Language not found in texts
+
+    Object.keys(selectedTexts).forEach(function(key) {
+      const element = document.getElementById(key);
+      if (element) {
+        element.textContent = selectedTexts[key];
+        if (language === 'arb') {
+          element.classList.add('text-container--rtl'); // Add the right-to-left class for Arabic
+        } else {
+          element.classList.remove('text-container--rtl'); // Remove the right-to-left class for other languages
+        }
+      }
+    });
+  }
+
+
+  function changeLanguage(language) {
+    if (language === 'en') {
+      document.getElementById('englishBtn').style.display = 'none';
+      document.getElementById('arabicBtn').style.display = 'block';
+    } else if (language === 'arb') {
+      document.getElementById('arabicBtn').style.display = 'none';
+      document.getElementById('englishBtn').style.display = 'block';
+    }
+    populateTexts(language);
+    localStorage.setItem('selectedLanguage', language);
+  }
+
+  let storedLanguage = localStorage.getItem('selectedLanguage') || navigator.language.toLowerCase();
+  if (storedLanguage !== 'en' && storedLanguage !== 'arb') {
+    storedLanguage = 'en';
+  }
+  changeLanguage(storedLanguage);
+
+
+  function toggleText() {
+    const textElement = document.getElementById('readMoreText');
+    const buttonElement = document.getElementById('paragraph4');
+    const arrowUp1 = document.getElementById('arrowUp1');
+    const arrowUp2 = document.getElementById('arrowUp2');
+    const language = localStorage.getItem('selectedLanguage') || 'en';
+
+    if (language === 'en') {
+      if (textElement.style.display === 'none') {
+        textElement.style.display = 'block';
+        arrowUp1.style.transform = "rotate(180deg)";
+        arrowUp2.style.transform = "rotate(180deg)";
+        buttonElement.textContent = 'Read Less';
+      } else {
+        textElement.style.display = 'none';
+        arrowUp1.style.transform = "rotate(0deg)";
+        arrowUp2.style.transform = "rotate(0deg)";
+        buttonElement.textContent = 'Read More';
+      }
+    } else if (language === 'arb') {
+      if (textElement.style.display === 'none') {
+        textElement.style.display = 'block';
+        arrowUp1.style.transform = "rotate(180deg)";
+        arrowUp2.style.transform = "rotate(180deg)";
+        buttonElement.textContent = 'أقرأ أقل';
+      } else {
+        textElement.style.display = 'none';
+        arrowUp1.style.transform = "rotate(0deg)";
+        arrowUp2.style.transform = "rotate(0deg)";
+        buttonElement.textContent = 'اقرأ أكثر';
+      }
+    }
+  }
+  function subscribe() {
+    const contentElement = document.getElementById('content');
+    const contentHeader = document.getElementById('header');
+    const contentMain = document.getElementById('main');
+    const contentFooter = document.getElementById('footer');
+    const subscribeFormElement = document.getElementById('subscribeForm');
+    const phoneNumberFormElement = document.getElementById('phoneNumberForm');
+
+    subscribeFormElement.style.display = 'none';
+    phoneNumberFormElement.style.display = 'block';
+
+    const subscribeBtn = document.getElementById('subscribeBtn');
+    const mobilePin = document.getElementById('mobile');
+
+    subscribeBtn.addEventListener('click', subscribe);
+
+    switch (contentElement.style.display) {
+      case 'none':
+        contentMain.style.display = 'none';
+        contentElement.style.display = 'block';
+        subscribeFormElement.style.display = 'block';
+        phoneNumberFormElement.style.display = 'none';
+        break;
+      case 'block':
+        contentElement.style.display = 'block';
+        subscribeFormElement.style.display = 'none';
+        mobilePin.style.display = 'none';
+        phoneNumberFormElement.style.display = 'block';
+        break;
+      default:
+        contentHeader.style.display = 'none';
+        contentMain.style.display = 'none';
+        contentFooter.style.display = 'none';
+        contentElement.style.display = 'block';
+        subscribeFormElement.style.display = 'block';
+        phoneNumberFormElement.style.display = 'none';
+        break;
+    }
+    const phoneNumberFormBtn = document.getElementById('phoneNumberFormBtn');
+    const successfullyTextShow = document.getElementById('successfullyTextShow');
+
+    phoneNumberFormBtn.addEventListener('click', function() {
+      contentMain.style.display = 'flex';
+      contentHeader.style.display = 'flex';
+      contentFooter.style.display = 'block';
+      contentElement.style.display = 'none';
+      subscribeFormElement.style.display = 'none';
+      phoneNumberFormElement.style.display = 'none';
+      successfullyTextShow.classList.add('show');
+      setTimeout(function() {
+        successfullyTextShow.classList.remove('show');
+      }, 5000);
+    });
+  }
+</script>
+</body>
+
+</html>

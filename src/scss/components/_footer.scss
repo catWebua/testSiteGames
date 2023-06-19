@@ -1,0 +1,38 @@
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .button-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 44px -10px 22px -10px;
+    a{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #AED300;
+      border-radius: 8px;
+      width: 143px;
+      height: 42px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      color: #000000;
+      margin: 0 10px;
+    }
+  }
+  h4{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 6px 0 20px 0;
+  }
+}

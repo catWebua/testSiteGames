@@ -12,7 +12,7 @@
     "zip": "gulp zip",
     "code": "editorconfig-checker"
   },
-  "author": "MaxGraph",
+  "author": "Alexi",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.16.7",

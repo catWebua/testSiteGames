@@ -1,0 +1,84 @@
+<div id="content" class="subscribe-case">
+  <div class="subscribe-header">
+    <button id="englishBtn" onclick="changeLanguage('en')">EN</button>
+    <button id="arabicBtn" onclick="changeLanguage('arb')" style="display: none;">ARB</button>
+
+    <img src="./img/svg/jazz.svg" alt="jazz">
+  </div>
+  <div id="text-container">
+    <h1 id="heading"></h1>
+    <h2 id="heading1" class="heading1"></h2>
+    <img src="./img/svg/arrow.svg" alt="arrow">
+
+    <p class="textWrap" id="paragraph"></p>
+
+    <div id="subscribeForm">
+      <h2 id="subheading"></h2>
+      <form class="subscribe-form">
+        <img src="./img/svg/close.svg" alt="Lock">
+        <input class="input" id="input1" type="text" pattern="[0-9]" maxlength="1" required/>
+        <input id="input2" type="text" pattern="[0-9]" maxlength="1" required/>
+        <input id="input3" type="text" pattern="[0-9]" maxlength="1" required/>
+        <input id="input4" type="text" pattern="[0-9]" maxlength="1" required/>
+      </form>
+      <button id="subscribeBtn" type="submit" disabled>Subscribe</button>
+    </div>
+
+    <div id="phoneNumberForm" class="phone-number-form">
+      <h2 id="subheading1"></h2>
+      <form>
+        <div class="codeCountry">
+          <span>+92</span>
+          <input type="tel" id="maskedInput" placeholder="XXX XXX XXX"/>
+          <div id="done">
+            <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.8333 1.39062L5.12496 10.5132L1.16663 6.36659" stroke="white" stroke-width="2.03571"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </form>
+      <button id="phoneNumberFormBtn" type="submit" disabled></button>
+    </div>
+
+    <p id="paragraph1"></p>
+
+    <div id="mobile">
+      <a href="#" id="paragraph2"></a>
+      <a href="#" id="paragraph3"></a>
+    </div>
+
+    <div class="textDropdown">
+      <div class="btnTDD">
+        <svg id="arrowUp1" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1.5L6 6.5L11 1.5" stroke="#8F8F8F" stroke-width="1.66667"/>
+        </svg>
+        <button id="paragraph4" onclick="toggleText()"></button>
+        <svg id="arrowUp2" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1.5L6 6.5L11 1.5" stroke="#8F8F8F" stroke-width="1.66667"/>
+        </svg>
+      </div>
+      <div id="readMoreText" style="display: none;">
+        <p id="paragraph10"></p>
+        <p id="paragraph11"></p>
+        <p id="paragraph12"></p>
+        <p id="paragraph13"></p>
+        <div class="myAccount">
+          <a href="#" id="paragraph14"></a>
+          <p id="paragraph15"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="subscribe-footer">
+      <div class="info">
+        <a href="#" id="paragraph5"></a>
+        <a href="#" id="paragraph6"></a>
+        <a href="#" id="paragraph7"></a>
+      </div>
+
+      <img src="./img/svg/white-logo.svg" alt="Logo">
+      <p id="paragraph8"></p>
+    </div>
+  </div>
+</div>

@@ -1,20 +1,194 @@
 <!DOCTYPE html>
-<html lang="ru" class="page">
+<html lang="en" class="page">
 
 @include('partials/head.html')
 
 <body class="page__body">
   <div class="site-container">
     @include('partials/header.html')
-    <main class="main">
-      <picture>
-        <source srcset="img/cover.webp" type="image/webp">
-        <img loading="lazy" src="img/cover.jpg" class="image" width="300" height="300" alt="Обложка канала MaxGraph">
-      </picture>
+    <main id="main" class="main">
+      @include('partials/main.html')
+      @include('partials/new-game.html')
+      @include('partials/popular-games.html')
     </main>
+    @include('partials/subscribe-case.html')
     @include('partials/footer.html')
-    <!-- @include('html/h1.html') пример include -->
   </div>
+<script>
+  const texts = {
+    'en': {
+      'heading': 'For the best content',
+      'heading1': 'Click below',
+      'paragraph': 'Get access to an extensive collection of\n premium games',
+      'subheading': 'Enter PIN',
+      'subheading1': 'Enter your phone number:',
+      'subscribeBtn': 'SUBSCRIBE',
+      'paragraph1': '11.95 PKR/Day',
+      'paragraph2': 'Re-send SMS with PIN code',
+      'paragraph3': 'Change number',
+      'paragraph4': 'Read More',
+      'paragraph5': 'T&C',
+      'paragraph6': 'CONTACT US ',
+      'paragraph7': 'FAQ',
+      'paragraph8': '@2023 All Rights Reserved',
+      'phoneNumberFormBtn': 'GET OTP',
+      'paragraph10': 'The cost will be added to your mobile phone bill.',
+      'paragraph11': 'You will be able to play the games already downloaded even if you unsusbcribe',
+      'paragraph12': 'Enjoy over 150 top premium games: ads free and without in-app purchases!',
+      'paragraph13': 'You can cancel your subscription at anytime from',
+      'paragraph14': 'My account',
+      'paragraph15': 'section',
+    },
+    'arb': {
+      'heading': 'انقر أدناه \nلأفضل محتوى',
+      'heading1': 'انقر أدناه',
+      'paragraph': 'احصل على مجموعة واسعة من الألعاب المتميزة',
+      'subheading': 'أدخل رقم التعريف الشخصي',
+      'subheading1': 'أدخل رقم هاتفك:',
+      'subscribeBtn': 'يشترك',
+      'paragraph1': '11.95 روبية باكستانية / يوم',
+      'paragraph2': 'إعادة إرسال الرسائل القصيرة مع رمز PIN',
+      'paragraph3': 'تغيير رقم',
+      'paragraph4': 'اقرأ أكثر',
+      'paragraph5': 'الشروط والأحكام',
+      'paragraph6': 'اتصل بنا',
+      'paragraph7': 'التعليمات',
+      'paragraph8': '@ 2023 جميع الحقوق محفوظة',
+      'phoneNumberFormBtn': 'احصل على OTP',
+      'paragraph10': 'ستضاف التكلفة إلى فاتورة هاتفك المحمول. ستتمكن',
+      'paragraph11': 'الألعاب التي تم تنزيلها بالفعل حتى إذا ألغيت ',
+      'paragraph12': 'الاشتراك استمتع بأكثر من 150 لعبة متميزة: إعلانات ',
+      'paragraph13': 'مجانية وبدون عمليات شراء داخل التطبيق! يمكنك إلغاء ',
+      'paragraph14': '',
+      'paragraph15': '',
+    }
+  };
+
+  function populateTexts(language) {
+    const selectedTexts = texts[language];
+    if (!selectedTexts) return; // Language not found in texts
+
+    Object.keys(selectedTexts).forEach(function(key) {
+      const element = document.getElementById(key);
+      if (element) {
+        element.textContent = selectedTexts[key];
+        if (language === 'arb') {
+          element.classList.add('text-container--rtl'); // Add the right-to-left class for Arabic
+        } else {
+          element.classList.remove('text-container--rtl'); // Remove the right-to-left class for other languages
+        }
+      }
+    });
+  }
+
+
+  function changeLanguage(language) {
+    if (language === 'en') {
+      document.getElementById('englishBtn').style.display = 'none';
+      document.getElementById('arabicBtn').style.display = 'block';
+    } else if (language === 'arb') {
+      document.getElementById('arabicBtn').style.display = 'none';
+      document.getElementById('englishBtn').style.display = 'block';
+    }
+    populateTexts(language);
+    localStorage.setItem('selectedLanguage', language);
+  }
+
+  let storedLanguage = localStorage.getItem('selectedLanguage') || navigator.language.toLowerCase();
+  if (storedLanguage !== 'en' && storedLanguage !== 'arb') {
+    storedLanguage = 'en';
+  }
+  changeLanguage(storedLanguage);
+
+
+  function toggleText() {
+    const textElement = document.getElementById('readMoreText');
+    const buttonElement = document.getElementById('paragraph4');
+    const arrowUp1 = document.getElementById('arrowUp1');
+    const arrowUp2 = document.getElementById('arrowUp2');
+    const language = localStorage.getItem('selectedLanguage') || 'en';
+
+    if (language === 'en') {
+      if (textElement.style.display === 'none') {
+        textElement.style.display = 'block';
+        arrowUp1.style.transform = "rotate(180deg)";
+        arrowUp2.style.transform = "rotate(180deg)";
+        buttonElement.textContent = 'Read Less';
+      } else {
+        textElement.style.display = 'none';
+        arrowUp1.style.transform = "rotate(0deg)";
+        arrowUp2.style.transform = "rotate(0deg)";
+        buttonElement.textContent = 'Read More';
+      }
+    } else if (language === 'arb') {
+      if (textElement.style.display === 'none') {
+        textElement.style.display = 'block';
+        arrowUp1.style.transform = "rotate(180deg)";
+        arrowUp2.style.transform = "rotate(180deg)";
+        buttonElement.textContent = 'أقرأ أقل';
+      } else {
+        textElement.style.display = 'none';
+        arrowUp1.style.transform = "rotate(0deg)";
+        arrowUp2.style.transform = "rotate(0deg)";
+        buttonElement.textContent = 'اقرأ أكثر';
+      }
+    }
+  }
+  function subscribe() {
+    const contentElement = document.getElementById('content');
+    const contentHeader = document.getElementById('header');
+    const contentMain = document.getElementById('main');
+    const contentFooter = document.getElementById('footer');
+    const subscribeFormElement = document.getElementById('subscribeForm');
+    const phoneNumberFormElement = document.getElementById('phoneNumberForm');
+
+    subscribeFormElement.style.display = 'none';
+    phoneNumberFormElement.style.display = 'block';
+
+    const subscribeBtn = document.getElementById('subscribeBtn');
+    const mobilePin = document.getElementById('mobile');
+
+    subscribeBtn.addEventListener('click', subscribe);
+
+    switch (contentElement.style.display) {
+      case 'none':
+        contentMain.style.display = 'none';
+        contentElement.style.display = 'block';
+        subscribeFormElement.style.display = 'block';
+        phoneNumberFormElement.style.display = 'none';
+        break;
+      case 'block':
+        contentElement.style.display = 'block';
+        subscribeFormElement.style.display = 'none';
+        mobilePin.style.display = 'none';
+        phoneNumberFormElement.style.display = 'block';
+        break;
+      default:
+        contentHeader.style.display = 'none';
+        contentMain.style.display = 'none';
+        contentFooter.style.display = 'none';
+        contentElement.style.display = 'block';
+        subscribeFormElement.style.display = 'block';
+        phoneNumberFormElement.style.display = 'none';
+        break;
+    }
+    const phoneNumberFormBtn = document.getElementById('phoneNumberFormBtn');
+    const successfullyTextShow = document.getElementById('successfullyTextShow');
+
+    phoneNumberFormBtn.addEventListener('click', function() {
+      contentMain.style.display = 'flex';
+      contentHeader.style.display = 'flex';
+      contentFooter.style.display = 'block';
+      contentElement.style.display = 'none';
+      subscribeFormElement.style.display = 'none';
+      phoneNumberFormElement.style.display = 'none';
+      successfullyTextShow.classList.add('show');
+      setTimeout(function() {
+        successfullyTextShow.classList.remove('show');
+      }, 5000);
+    });
+  }
+</script>
 </body>
 
 </html>

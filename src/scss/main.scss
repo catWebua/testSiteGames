@@ -4,13 +4,34 @@
 @import "fonts";
 @import "settings";
 
-// подключения компонентов страницы
 @import "./components/header";
+@import "./components/main";
+@import "./components/popular-games";
+@import "./components/new-game";
+@import "./components/subscribe-case";
+@import "./components/footer";
 
-// тестовые стили, удалите их
 .page__body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  //display: flex;
+  //align-items: center;
+  //justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
   height: var(--vh);
+  background: #1E2128;
 }
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#text-container{
+  .text-container--rtl {
+    text-align: right;
+  }
+}
+
+
+
+
